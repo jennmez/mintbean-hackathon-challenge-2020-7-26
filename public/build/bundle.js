@@ -349,7 +349,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (104:32) 
+    // (110:32) 
     function create_if_block_1(ctx) {
     	let p;
 
@@ -358,7 +358,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "game screen here";
     			attr_dev(p, "class", "svelte-6a3c4j");
-    			add_location(p, file, 104, 4, 2519);
+    			add_location(p, file, 110, 4, 2587);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -373,14 +373,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(104:32) ",
+    		source: "(110:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:2) {#if state === 'welcome'}
+    // (91:2) {#if state === 'welcome'}
     function create_if_block(ctx) {
     	let p;
     	let t1;
@@ -396,12 +396,6 @@ var app = (function () {
     	let option5;
     	let option6;
     	let t10;
-    	let select2;
-    	let option7;
-    	let option8;
-    	let option9;
-    	let option10;
-    	let t15;
     	let button;
     	let mounted;
     	let dispose;
@@ -409,7 +403,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "So you think you know technology? Prove it! Select a category, number of\n      questions, difficulty level and let's find out!";
+    			p.textContent = "So you think you know HTML? Prove it! Select the number of questions,\n      difficulty level and let's find out!";
     			t1 = space();
     			form = element("form");
     			select0 = element("select");
@@ -422,71 +416,47 @@ var app = (function () {
     			t5 = space();
     			select1 = element("select");
     			option3 = element("option");
-    			option3.textContent = "DevOps";
+    			option3.textContent = "5";
     			option4 = element("option");
-    			option4.textContent = "Code";
+    			option4.textContent = "10";
     			option5 = element("option");
-    			option5.textContent = "Docker";
+    			option5.textContent = "15";
     			option6 = element("option");
-    			option6.textContent = "MySQL";
+    			option6.textContent = "20";
     			t10 = space();
-    			select2 = element("select");
-    			option7 = element("option");
-    			option7.textContent = "5";
-    			option8 = element("option");
-    			option8.textContent = "10";
-    			option9 = element("option");
-    			option9.textContent = "15";
-    			option10 = element("option");
-    			option10.textContent = "20";
-    			t15 = space();
     			button = element("button");
     			button.textContent = "Start Game";
     			attr_dev(p, "class", "svelte-6a3c4j");
-    			add_location(p, file, 79, 4, 1604);
+    			add_location(p, file, 91, 4, 1921);
     			option0.__value = "Easy";
     			option0.value = option0.__value;
-    			add_location(option0, file, 85, 8, 1833);
+    			add_location(option0, file, 97, 8, 2136);
     			option1.__value = "Medium";
     			option1.value = option1.__value;
-    			add_location(option1, file, 86, 8, 1876);
+    			add_location(option1, file, 98, 8, 2179);
     			option2.__value = "Hard";
     			option2.value = option2.__value;
-    			add_location(option2, file, 87, 8, 1923);
-    			if (/*difficulty*/ ctx[1] === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[5].call(select0));
-    			add_location(select0, file, 84, 6, 1792);
-    			option3.__value = "devops";
+    			add_location(option2, file, 99, 8, 2226);
+    			if (/*difficulty*/ ctx[1] === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[4].call(select0));
+    			add_location(select0, file, 96, 6, 2095);
+    			option3.__value = "5";
     			option3.value = option3.__value;
-    			add_location(option3, file, 90, 8, 2019);
-    			option4.__value = "code";
+    			add_location(option3, file, 102, 8, 2328);
+    			option4.__value = "10";
     			option4.value = option4.__value;
-    			add_location(option4, file, 91, 8, 2066);
-    			option5.__value = "docker";
+    			add_location(option4, file, 103, 8, 2365);
+    			option5.__value = "15";
     			option5.value = option5.__value;
-    			add_location(option5, file, 92, 8, 2109);
-    			option6.__value = "mySQL";
+    			add_location(option5, file, 104, 8, 2404);
+    			option6.__value = "20";
     			option6.value = option6.__value;
-    			add_location(option6, file, 93, 8, 2156);
-    			if (/*category*/ ctx[3] === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[6].call(select1));
-    			add_location(select1, file, 89, 6, 1980);
-    			option7.__value = "5";
-    			option7.value = option7.__value;
-    			add_location(option7, file, 96, 8, 2260);
-    			option8.__value = "10";
-    			option8.value = option8.__value;
-    			add_location(option8, file, 97, 8, 2297);
-    			option9.__value = "15";
-    			option9.value = option9.__value;
-    			add_location(option9, file, 98, 8, 2336);
-    			option10.__value = "20";
-    			option10.value = option10.__value;
-    			add_location(option10, file, 99, 8, 2375);
-    			if (/*numOfQuestions*/ ctx[2] === void 0) add_render_callback(() => /*select2_change_handler*/ ctx[7].call(select2));
-    			add_location(select2, file, 95, 6, 2215);
+    			add_location(option6, file, 105, 8, 2443);
+    			if (/*numOfQuestions*/ ctx[2] === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[5].call(select1));
+    			add_location(select1, file, 101, 6, 2283);
     			attr_dev(button, "type", "submit");
     			attr_dev(button, "class", "svelte-6a3c4j");
-    			add_location(button, file, 101, 6, 2428);
-    			add_location(form, file, 83, 4, 1754);
+    			add_location(button, file, 107, 6, 2496);
+    			add_location(form, file, 95, 4, 2057);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -503,23 +473,15 @@ var app = (function () {
     			append_dev(select1, option4);
     			append_dev(select1, option5);
     			append_dev(select1, option6);
-    			select_option(select1, /*category*/ ctx[3]);
+    			select_option(select1, /*numOfQuestions*/ ctx[2]);
     			append_dev(form, t10);
-    			append_dev(form, select2);
-    			append_dev(select2, option7);
-    			append_dev(select2, option8);
-    			append_dev(select2, option9);
-    			append_dev(select2, option10);
-    			select_option(select2, /*numOfQuestions*/ ctx[2]);
-    			append_dev(form, t15);
     			append_dev(form, button);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[5]),
-    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[6]),
-    					listen_dev(select2, "change", /*select2_change_handler*/ ctx[7]),
-    					listen_dev(form, "submit", /*handleSubmit*/ ctx[4], false, false, false)
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[4]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[5]),
+    					listen_dev(form, "submit", /*handleSubmit*/ ctx[3], false, false, false)
     				];
 
     				mounted = true;
@@ -530,12 +492,8 @@ var app = (function () {
     				select_option(select0, /*difficulty*/ ctx[1]);
     			}
 
-    			if (dirty & /*category*/ 8) {
-    				select_option(select1, /*category*/ ctx[3]);
-    			}
-
     			if (dirty & /*numOfQuestions*/ 4) {
-    				select_option(select2, /*numOfQuestions*/ ctx[2]);
+    				select_option(select1, /*numOfQuestions*/ ctx[2]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -551,7 +509,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(79:2) {#if state === 'welcome'}",
+    		source: "(91:2) {#if state === 'welcome'}",
     		ctx
     	});
 
@@ -581,10 +539,10 @@ var app = (function () {
     			t1 = space();
     			if (if_block) if_block.c();
     			attr_dev(h1, "class", "svelte-6a3c4j");
-    			add_location(h1, file, 76, 4, 1532);
-    			add_location(header, file, 75, 2, 1519);
+    			add_location(h1, file, 88, 4, 1849);
+    			add_location(header, file, 87, 2, 1836);
     			attr_dev(main, "class", "svelte-6a3c4j");
-    			add_location(main, file, 74, 0, 1510);
+    			add_location(main, file, 86, 0, 1827);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -638,11 +596,16 @@ var app = (function () {
     	let difficulty;
     	let numOfQuestions;
     	let category;
-    	let questionsPromise;
+
+    	// let questionsPromise;
     	let questions;
+
     	let score;
-    	let trivia;
-    	let answers;
+
+    	// let trivia;
+    	let questionAnswers;
+
+    	let userAnswers;
 
     	const api = {
     		key: {"env":{"isProd":false,"QUIZ_API_KEY":"e6lMqx1TmljfaA2D7M3W1bRRpZymDOAbos3niO0i"}}.env.QUIZ_API_KEY,
@@ -651,12 +614,24 @@ var app = (function () {
 
     	const loadQuestions = async () => {
     		try {
-    			trivia = [];
-    			answers = [];
     			score = 0;
-    			let response = await fetch(`${proxyURL}${api.baseURL}questions?apiKey=${api.key}&category=${category}&difficulty=${difficulty}&limit=${numOfQuestions}`);
+    			let response = await fetch(`${proxyURL}${api.baseURL}questions?apiKey=${api.key}&difficulty=${difficulty}&limit=${numOfQuestions}&tags=JavaScript`);
     			questions = await response.json();
     			console.log(questions);
+    			getQuestions(questions);
+    		} catch(err) {
+    			alert(err);
+    		}
+    	};
+
+    	const getQuestions = async questions => {
+    		try {
+    			userAnswers = [];
+
+    			const array = await questions.forEach(question => {
+    				let answersArray = question.incorrect_answers;
+    				answersArray.push(question.correct_answer);
+    			});
     		} catch(err) {
     			alert(err);
     		}
@@ -665,7 +640,7 @@ var app = (function () {
     	const handleSubmit = e => {
     		e.preventDefault();
     		loadQuestions();
-    		console.log(difficulty, numOfQuestions, category);
+    		console.log(difficulty, numOfQuestions);
     		$$invalidate(0, state = "playing");
     	};
 
@@ -684,11 +659,6 @@ var app = (function () {
     	}
 
     	function select1_change_handler() {
-    		category = select_value(this);
-    		$$invalidate(3, category);
-    	}
-
-    	function select2_change_handler() {
     		numOfQuestions = select_value(this);
     		$$invalidate(2, numOfQuestions);
     	}
@@ -699,14 +669,14 @@ var app = (function () {
     		difficulty,
     		numOfQuestions,
     		category,
-    		questionsPromise,
     		questions,
     		score,
-    		trivia,
-    		answers,
+    		questionAnswers,
+    		userAnswers,
     		proxyURL,
     		api,
     		loadQuestions,
+    		getQuestions,
     		handleSubmit
     	});
 
@@ -714,12 +684,11 @@ var app = (function () {
     		if ("state" in $$props) $$invalidate(0, state = $$props.state);
     		if ("difficulty" in $$props) $$invalidate(1, difficulty = $$props.difficulty);
     		if ("numOfQuestions" in $$props) $$invalidate(2, numOfQuestions = $$props.numOfQuestions);
-    		if ("category" in $$props) $$invalidate(3, category = $$props.category);
-    		if ("questionsPromise" in $$props) questionsPromise = $$props.questionsPromise;
+    		if ("category" in $$props) category = $$props.category;
     		if ("questions" in $$props) questions = $$props.questions;
     		if ("score" in $$props) score = $$props.score;
-    		if ("trivia" in $$props) trivia = $$props.trivia;
-    		if ("answers" in $$props) answers = $$props.answers;
+    		if ("questionAnswers" in $$props) questionAnswers = $$props.questionAnswers;
+    		if ("userAnswers" in $$props) userAnswers = $$props.userAnswers;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -730,11 +699,9 @@ var app = (function () {
     		state,
     		difficulty,
     		numOfQuestions,
-    		category,
     		handleSubmit,
     		select0_change_handler,
-    		select1_change_handler,
-    		select2_change_handler
+    		select1_change_handler
     	];
     }
 

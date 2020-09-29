@@ -4,11 +4,12 @@
   let difficulty;
   let numOfQuestions;
   let category;
-  let questionsPromise;
+  // let questionsPromise;
   let questions;
   let score;
-  let trivia;
-  let answers;
+  // let trivia;
+  let questionAnswers;
+  let userAnswers;
 
   const proxyURL = 'https://cors-anywhere.herokuapp.com/';
   const api = {
@@ -18,14 +19,25 @@
 
   const loadQuestions = async () => {
     try {
-      trivia = [];
-      answers = [];
       score = 0;
       let response = await fetch(
-        `${proxyURL}${api.baseURL}questions?apiKey=${api.key}&category=${category}&difficulty=${difficulty}&limit=${numOfQuestions}`
+        `${proxyURL}${api.baseURL}questions?apiKey=${api.key}&difficulty=${difficulty}&limit=${numOfQuestions}&tags=JavaScript`
       );
       questions = await response.json();
       console.log(questions);
+      getQuestions(questions);
+    } catch (err) {
+      alert(err);
+    }
+  };
+
+  const getQuestions = async (questions) => {
+    try {
+      userAnswers = [];
+      const array = await questions.forEach((question) => {
+        let answersArray = question.incorrect_answers;
+        answersArray.push(question.correct_answer);
+      });
     } catch (err) {
       alert(err);
     }
@@ -34,7 +46,7 @@
   const handleSubmit = (e) => {
     e.preventDefault();
     loadQuestions();
-    console.log(difficulty, numOfQuestions, category);
+    console.log(difficulty, numOfQuestions);
     state = 'playing';
   };
 
@@ -78,20 +90,14 @@
   </header>
   {#if state === 'welcome'}
     <p>
-      So you think you know technology? Prove it! Select a category, number of
-      questions, difficulty level and let's find out!
+      So you think you know HTML? Prove it! Select the number of questions,
+      difficulty level and let's find out!
     </p>
     <form on:submit={handleSubmit}>
       <select bind:value={difficulty}>
         <option value="Easy">Easy</option>
         <option value="Medium">Medium</option>
         <option value="Hard">Hard</option>
-      </select>
-      <select bind:value={category}>
-        <option value="devops">DevOps</option>
-        <option value="code">Code</option>
-        <option value="docker">Docker</option>
-        <option value="mySQL">MySQL</option>
       </select>
       <select bind:value={numOfQuestions}>
         <option value="5">5</option>
